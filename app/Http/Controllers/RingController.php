@@ -63,7 +63,7 @@ class RingController extends Controller
      */
     public function edit(Ring $ring)
     {
-        //
+        return view('rings.edit', compact('ring'));
     }
 
     /**
@@ -75,7 +75,9 @@ class RingController extends Controller
      */
     public function update(Request $request, Ring $ring)
     {
-        //
+        $ring->update($request->all());
+
+        return redirect()->route('rings.show', $ring);
     }
 
     /**
