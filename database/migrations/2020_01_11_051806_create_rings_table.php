@@ -15,6 +15,7 @@ class CreateRingsTable extends Migration
     {
         Schema::create('rings', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
             $table->timestamps();
         });
     }
