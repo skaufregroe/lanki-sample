@@ -11,4 +11,8 @@
             </div>
         @endforeach
     </div>
+
+    <div class="m-3">
+        <a href="{{ route('rings.create')}}" class="btn btn-primary">New Ring</a>
+    </div>
 @endsection
