@@ -37,7 +37,11 @@ class RingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ring = new Ring($request->all());
+
+        $ring->save();
+
+        return redirect()->route('rings.show', $ring);
     }
 
     /**
