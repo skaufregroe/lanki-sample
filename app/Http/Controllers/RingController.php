@@ -14,7 +14,9 @@ class RingController extends Controller
      */
     public function index()
     {
-        //
+        $rings = Ring::all();
+
+        return view('rings.index', compact('rings'));
     }
 
     /**
