@@ -13,6 +13,8 @@
 
 Route::get('/', 'WebController@index');
 
+Route::resource('/rings', 'RingController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
