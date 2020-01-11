@@ -48,7 +48,7 @@ class RingController extends Controller
      */
     public function show(Ring $ring)
     {
-        //
+        return view('rings.show', compact('ring'));
     }
 
     /**
