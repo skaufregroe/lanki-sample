@@ -15,6 +15,8 @@ Route::get('/', 'WebController@index');
 
 Route::resource('/rings', 'RingController');
 
+Route::resource('rings.cards', 'CardController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
