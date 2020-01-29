@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Card;
+use App\Ring;
 use Illuminate\Http\Request;
 
 class CardController extends Controller
@@ -12,9 +13,11 @@ class CardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Ring $ring, Request $request)
     {
-        //
+        $cards = Card::find($ring->id);
+
+        return view('cards.index', compact('cards', 'ring'));
     }
 
     /**
