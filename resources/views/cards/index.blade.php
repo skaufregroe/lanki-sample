@@ -13,7 +13,7 @@
             <div class="card col-md-4">
                 <div class="card-body">
                     <h5 class="card-title">{{ $card->name }}</h5>
-                    <a href="{{ route('rings.cards.show', $card) }}" class="btn btn-primary">Go somewhere</a>
+                    <a href="{{ route('rings.cards.show', [$ring, $card]) }}" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
         @endforeach

@@ -15,7 +15,7 @@ class CardController extends Controller
      */
     public function index(Ring $ring, Request $request)
     {
-        $cards = Card::find($ring->id);
+        $cards = Card::where('ring_id', $ring->id)->get();
 
         return view('cards.index', compact('cards', 'ring'));
     }
