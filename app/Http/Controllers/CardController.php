@@ -73,9 +73,11 @@ class CardController extends Controller
      * @param  \App\Card  $card
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Card $card)
+    public function update(Request $request, Ring $ring, Card $card)
     {
-        //
+        $card->update($request->all());
+
+        return redirect()->route('rings.cards.show', [$ring, $card]);
     }
 
     /**
