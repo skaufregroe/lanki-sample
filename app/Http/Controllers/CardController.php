@@ -50,9 +50,9 @@ class CardController extends Controller
      * @param  \App\Card  $card
      * @return \Illuminate\Http\Response
      */
-    public function show(Card $card)
+    public function show(Ring $ring, Card $card)
     {
-        //
+        return view('cards.show', compact('ring', 'card'));
     }
 
     /**
